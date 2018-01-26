@@ -1,7 +1,7 @@
 .login2(ng-controller='SignInCtrl')
   .login-wrapper
     a(href='./')
-      img(width='160', height='160', src='/static/logo/exports/STF-512.png', title='STF')
+      img(width='160', height='160', src='/static/logo/exports/logo.png', title='oTMS Device Management Platform')
 
     form(name='signin', novalidate, ng-submit='submit()')
       .alert.alert-danger(ng-show='error')
@@ -22,10 +22,10 @@
         .input-group
           span.input-group-addon
             i.fa.fa-envelope
-          input.form-control(ng-model='email', name='email', required, type='email', placeholder='E-mail',
-          autocorrect='off', autocapitalize='off', spellcheck='false', autocomplete='section-login email')
-        .alert.alert-warning(ng-show='signin.email.$dirty && signin.email.$invalid')
-          span(ng-show='signin.email.$error.email', translate) Please enter a valid email
-          span(ng-show='signin.email.$error.required', translate) Please enter your email
+          input.form-control(ng-model='password', name='password', required, type='password', placeholder='E-mail',
+          autocorrect='off', autocapitalize='off', spellcheck='false', autocomplete='section-login password')
+        .alert.alert-warning(ng-show='signin.password.$dirty && signin.password.$invalid')
+          span(ng-show='signin.password.$error.password', translate) Please enter a valid password
+          span(ng-show='signin.password .$error.required', translate) Please enter your password
 
       input.btn.btn-lg.btn-primary.btn-block(type='submit', value='Log In')
